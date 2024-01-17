@@ -7,6 +7,10 @@ const path = require('path');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+  res.send('Test test test');
+});
+
 app.post('/upload', (req, res) => {
   const file = req.files.image;
   const username = req.body.username;
